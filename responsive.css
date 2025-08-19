@@ -1,0 +1,238 @@
+/* ===== FULL RESPONSIVE STYLES ===== */
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+
+  /* Header & Nav */
+  header {
+    padding: 12px 20px;
+  }
+
+  nav ul {
+    width: 180px;
+    padding: 15px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    font-size: 1.6rem;
+  }
+
+  /* Logout Button */
+  #logoutBtn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Hero Section */
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text .btn {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+
+  /* About Section */
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 10px;
+  }
+
+  .about-image img {
+    max-width: 80%;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  /* Stats Section */
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 10px;
+  }
+
+  .stat-box {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .stat-box h3 {
+    font-size: 1.5rem;
+  }
+
+  .stat-box p {
+    font-size: 0.95rem;
+  }
+
+  /* Team Section */
+  .team-container {
+    flex-direction: column;
+  }
+
+  .team-photo img {
+    max-width: 90%;
+  }
+
+  /* Services / Cards */
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card img {
+    height: auto;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  /* Booking Section */
+  #booking {
+    padding: 50px 10px;
+  }
+
+  .booking-card {
+    padding: 25px 15px;
+    max-width: 90%;
+  }
+
+  .booking-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .booking-card p {
+    font-size: 0.95rem;
+  }
+
+  .booking-card form input,
+  .booking-card form select,
+  .booking-card button {
+    font-size: 0.9rem;
+  }
+
+  /* Contact Section */
+  .contact h1 {
+    font-size: 2rem;
+  }
+
+  .contact form {
+    padding: 25px 15px;
+  }
+
+  .contact form input,
+  .contact form textarea,
+  .contact form button {
+    font-size: 0.95rem;
+  }
+
+  /* Auth Pages */
+  .auth {
+    margin: 40px 15px;
+    padding: 25px 15px;
+  }
+
+  .auth h1 {
+    font-size: 1.6rem;
+  }
+
+  .auth input {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .auth .btn {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+
+  /* Header & Nav */
+  nav ul {
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    padding: 20px;
+    display: none; /* toggled by JS */
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* About Section */
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+  }
+
+  .about-image img {
+    max-width: 85%;
+  }
+
+  /* Stats Section */
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 5%;
+  }
+
+  /* Team Section */
+  .team-container {
+    flex-direction: column;
+  }
+
+  /* Services / Cards */
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* Booking Section */
+  .booking-card {
+    max-width: 90%;
+    padding: 30px 20px;
+  }
+
+  /* Contact Section */
+  .contact form {
+    max-width: 90%;
+    padding: 30px 20px;
+  }
+}
