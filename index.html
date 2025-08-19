@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belsies Barbershop | Home</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Smooth Scroll -->
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo"><i class="fa-solid fa-scissors"></i> Belsies Barbershop</div>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="home" class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="https://videos.pexels.com/video-files/4631351/4631351-hd_1066_1920_25fps.mp4" type="video/mp4">
+  </video>
+  <div class="hero-text">
+    <h1>Look Sharp, Feel Confident</h1>
+    <p>Your style, our passion. Book your appointment today.</p>
+    <a href="#services" class="btn">View Services</a>
+  </div>
+</section>
+
+<!-- ===== SERVICES SECTION ===== -->
+<section id="services" class="services-list">
+  <h1>Our Services & Prices</h1>
+  <div class="cards">
+    <div class="card">
+      <img src="https://tse1.explicit.bing.net/th/id/OIP.NPRhpHvk4LmtN2Yf7u-FxQHaIA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Haircut">
+      <h3>Haircut</h3>
+      <p>KSh 300</p>
+      <a href="#booking" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.qjjtLCKSxLgncfOTySHmDgHaGH?w=1000&h=826&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Beard Trim">
+      <h3>Beard Trim</h3>
+      <p>KSh 200</p>
+      <a href="#booking" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/R.f8dc5913541214e3dbd83366287d390d?rik=xE41nxEQHrrDKQ&pid=ImgRaw&r=0" alt="Hair Dye">
+      <h3>Hair Dye</h3>
+      <p>KSh 600</p>
+      <a href="#booking" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="https://tse1.explicit.bing.net/th/id/OIP.741IvYw_PP75hxr-JFY30gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Facial Treatment">
+      <h3>Facial Treatment</h3>
+      <p>KSh 700</p>
+      <a href="#booking" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="http://127.0.0.1:5500/belsies-barbershop/Frontend/images/kids%20haircut.jpg" alt="Kids Haircut">
+      <h3>Kids Haircut</h3>
+      <p>KSh 150</p>
+      <a href="#booking" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="https://www.secondnarrowsmassage.ca/wp-content/uploads/2010/10/CYRMT-34.jpg" alt="Massage">
+      <h3>Massage</h3>
+      <p>KSh 1500</p>
+      <a href="#booking" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/R.260fa74f692f61d685cb06296a42b0e0?rik=zTPdN6uVaAR5xA&pid=ImgRaw&r=0" alt="Line Up">
+      <h3>Line Up</h3>
+      <p>KSh 150</p>
+      <a href="#booking" class="book-btn">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOOKING SECTION ===== -->
+<section id="booking">
+  <div class="booking-card">
+    <h2>Book Your Appointment</h2>
+    <p>Fill out the form below to schedule your next haircut, shave, or grooming session with our expert barbers.</p>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="text" placeholder="Barber's Name" required />
+      <input type="date" required />
+      <input type="time" required />
+
+      <select required>
+        <option disabled selected>Select Service</option>
+        <option>Haircut - KSh 300</option>
+        <option>Beard Trim - KSh 200</option>
+        <option>Hair Dye - KSh 600</option>
+        <option>Facial Treatment - KSh 700</option>
+        <option>Kids Haircut - KSh 150</option>
+        <option>Massage - KSh 1500</option>
+        <option>Line Up - KSh 150</option>
+      </select>
+
+      <select required>
+        <option disabled selected>Select Slot</option>
+        <option>Slot 1</option>
+        <option>Slot 2</option>
+        <option>Slot 3</option>
+        <option>Slot 4</option>
+        <option>Slot 5</option>
+        <option>Slot 6</option>
+        <option>Slot 7</option>
+        <option>Slot 8</option>
+        <option>Slot 9</option>
+        <option>Slot 10</option>
+      </select>
+
+      <select required>
+        <option disabled selected>Payment Method</option>
+        <option>M-Pesa</option>
+        <option>Card</option>
+        <option>Cash</option>
+      </select>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+</section>
+
+  <!-- About Content -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2><i class="fa-solid fa-circle-info"></i> About Us</h2>
+      <p>
+        Established in <strong>2025</strong>, <b>Belsies Barbershop</b> has become a trusted name in men’s grooming. 
+        Our mission is simple: to combine classic barbering traditions with a modern twist, 
+        offering a comfortable, stylish, and relaxing environment for every client.
+      </p>
+      <p>
+        <i class="fa-solid fa-users"></i> Our team of expert barbers are passionate about precision, 
+        style, and giving you the confidence you deserve. Whether you’re looking for a fresh fade, 
+        classic cut, or a luxury shave, we’ve got you covered.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="images/interior.jpg" alt="Barbershop Interior">
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="stat-box">
+      <i class="fa-solid fa-user-group"></i>
+      <h3>2,500+</h3>
+      <p>Happy Customers</p>
+    </div>
+    <div class="stat-box">
+      <i class="fa-solid fa-scissors"></i>
+      <h3>5+</h3>
+      <p>Years of Experience</p>
+    </div>
+    <div class="stat-box">
+      <i class="fa-solid fa-users-gear"></i>
+      <h3>6</h3>
+      <p>Professional Barbers</p>
+    </div>
+    <div class="stat-box">
+      <i class="fa-solid fa-award"></i>
+      <h3>10+</h3>
+      <p>Awards Won</p>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="team">
+    <h2><i class="fa-solid fa-people-group"></i> Meet Our Team</h2>
+    <div class="team-container">
+      <div class="team-info">
+        <p>
+          At <strong>Belsies Barbershop</strong>, our dedicated team of skilled barbers 
+          works together to deliver the best grooming experience.  
+          With years of expertise in modern fades, classic cuts, and precision shaves,  
+          we combine professionalism with passion to make sure every client looks and feels their best.
+        </p>
+      </div>
+      <div class="team-photo">
+        <img src="https://i.ytimg.com/vi/EsJW3c4EmqI/maxresdefault.jpg" alt="Our Barbershop Team">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" name="name" required>
+      <input type="email" placeholder="Your Email" name="email" required>
+      <textarea placeholder="Your Message" name="message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Belsies Barbershop. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for Hamburger -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav ul');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/booking.js"></script>
+  <script type="module" src="js/contact.js"></script>
+</body>
+</html>
