@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Belsies Admin Dashboard</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header>
+    <div class="topbar">
+      <p>Belsies Barbershop — Admin</p>
+      <div class="top-actions">
+        <a id="backToSite" href="index.html" class="btn back-btn">← Back to site</a>
+        <button id="logoutBtn" class="btn danger">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <main>
+    <!-- SIDEBAR -->
+    <aside>
+      <nav>
+        <ul>
+          <li><button class="tab-btn active" data-tab="dashboard">Dashboard</button></li>
+          <li><button class="tab-btn" data-tab="bookings">Bookings</button></li>
+          <li><button class="tab-btn" data-tab="messages">Messages</button></li>
+          <li><button class="tab-btn" data-tab="users">Users & Staff</button></li>
+          <li><button class="tab-btn" data-tab="reports">Reports</button></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <section id="contentArea">
+      
+      <!-- DASHBOARD -->
+      <div class="tab-page active" id="dashboard">
+        <div id="quickPanel">
+          <div class="stat-card orange">
+            <i class="fa fa-calendar-check"></i>
+            <p>Total Bookings</p>
+            <p id="statBookings">0</p>
+          </div>
+          <div class="stat-card blue">
+            <i class="fa fa-envelope"></i>
+            <p>Total Messages</p>
+            <p id="statMessages">0</p>
+          </div>
+          <div class="stat-card green">
+            <i class="fa fa-users"></i>
+            <p>Total Customers</p>
+            <p id="statUsers">0</p>
+          </div>
+          <div class="stat-card green">
+            <i class="fa fa-sack-dollar"></i>
+            <p>Total Revenue</p>
+            <p id="statRevenue">KSh 0</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOOKINGS -->
+      <div class="tab-page" id="bookings">
+        <h2>Bookings</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Service</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Barber</th>
+              <th>Slot</th>
+              <th>Payment</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="bookingsTable"></tbody>
+        </table>
+      </div>
+
+      <!-- MESSAGES -->
+      <div class="tab-page" id="messages">
+        <h2>Messages</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>From</th>
+              <th>Email</th>
+              <th>Message</th>
+              <th>When</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="messagesTable"></tbody>
+        </table>
+      </div>
+
+<!-- USERS -->
+<div class="tab-page" id="users">
+  <h2>Users & Staff</h2>
+
+  <!-- Add New User Form -->
+  <div id="addUserSection">
+    <h3>Add New User</h3>
+    <form id="addUserForm">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <select name="role" required>
+        <option value="admin">Admin</option>
+        <option value="customer">Customer</option>
+        <option value="staff">Staff</option>
+      </select>
+      <select name="status">
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+      <button type="submit">Add User</button>
+    </form>
+  </div>
+
+  <!-- Users Table -->
+  <h3>Existing Users & Staff</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="usersTable"></tbody>
+  </table>
+</div>
+
+     <!-- REPORTS -->
+<div class="tab-page" id="reports">
+  <h2>Reports</h2>
+  <div id="reportsSummary">
+    <p>Total Bookings: <span class="totalBookings">0</span></p>
+    <p>Total Revenue: <span class="totalRevenue">KSh 0</span></p>
+    <p>Total Messages: <span class="totalMessages">0</span></p>
+    <p>Total Customers: <span class="totalCustomers">0</span></p>
+  </div>
+</div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Admin — protected area</p>
+  </footer>
+
+  <script type="module" src="js/admin.js"></script>
+  <script type="module" src="js/users.js"></script>
+</body>
+</html>
