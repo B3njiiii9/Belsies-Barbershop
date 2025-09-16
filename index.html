@@ -4,18 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Belsies Barbershop | Home</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Smooth Scroll -->
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
 </head>
 <body>
 
@@ -35,6 +26,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
         <li><button id="logoutBtn">Logout</button></li>
       </ul>
     </nav>
@@ -106,20 +98,34 @@
   </div>
 </section>
 
-<!-- ===== BOOKING SECTION ===== -->
-<section id="booking">
-  <div class="booking-card">
+<section id="booking" class="booking-section">
+  <div class="booking-container">
     <h2>Book Your Appointment</h2>
-    <p>Fill out the form below to schedule your next haircut, shave, or grooming session with our expert barbers.</p>
+    <p>Choose your service and preferred time slot.</p>
     <form>
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email Address" required />
-      <input type="tel" placeholder="Phone Number" required />
-      <input type="text" placeholder="Barber's Name" required />
-      <input type="date" required />
-      <input type="time" required />
+      <input type="text" name="fullName" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
 
-      <select required>
+      <!-- Barber Dropdown -->
+      <select name="barberName" required>
+        <option disabled selected>Select Barber</option>
+        <option>John</option>
+        <option>Erick</option>
+        <option>Brian</option>
+        <option>Chris</option>
+        <option>Jane</option>
+        <option>Yvonne</option>
+        <option>Shirleen</option>
+      </select>
+
+      <div class="date-time">
+        <input type="date" name="date" required />
+        <input type="time" name="time" required />
+      </div>
+
+      <!-- Service Dropdown -->
+      <select name="service" required>
         <option disabled selected>Select Service</option>
         <option>Haircut - KSh 300</option>
         <option>Beard Trim - KSh 200</option>
@@ -130,7 +136,8 @@
         <option>Line Up - KSh 150</option>
       </select>
 
-      <select required>
+      <!-- Slots Dropdown (10 slots) -->
+      <select name="slot" required>
         <option disabled selected>Select Slot</option>
         <option>Slot 1</option>
         <option>Slot 2</option>
@@ -144,14 +151,15 @@
         <option>Slot 10</option>
       </select>
 
-      <select required>
+      <!-- Payment Method -->
+      <select name="paymentMethod" required>
         <option disabled selected>Payment Method</option>
         <option>M-Pesa</option>
         <option>Card</option>
         <option>Cash</option>
       </select>
 
-      <button type="submit">Confirm Booking</button>
+      <button type="submit" class="btn-book">Book Now</button>
     </form>
   </div>
 </section>
@@ -221,12 +229,12 @@
   <!-- Contact -->
   <section id="contact" class="contact">
     <h1>Contact Us</h1>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" name="name" required>
-      <input type="email" placeholder="Your Email" name="email" required>
-      <textarea placeholder="Your Message" name="message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+<form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
   </section>
 
   <!-- Footer -->
@@ -234,18 +242,10 @@
     <p>&copy; 2025 Belsies Barbershop. All rights reserved.</p>
   </footer>
 
-  <!-- JS for Hamburger -->
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const nav = document.querySelector('nav ul');
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
-
-  <script type="module" src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
   <script type="module" src="js/auth.js"></script>
   <script type="module" src="js/booking.js"></script>
   <script type="module" src="js/contact.js"></script>
 </body>
 </html>
+
