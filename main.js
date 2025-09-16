@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
+
       const icon = menuToggle.querySelector("i");
       if (navLinks.classList.contains("active")) {
         icon.classList.remove("fa-bars");
@@ -55,4 +56,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
 });
