@@ -4,25 +4,23 @@ import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/fir
 
 document.addEventListener("DOMContentLoaded", () => {
   const bookingForm = document.querySelector("#booking form");
-
   if (!bookingForm) return;
 
   bookingForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Capture form data
-    const fullName = bookingForm.querySelector("input[placeholder='Full Name']").value.trim();
-    const email = bookingForm.querySelector("input[placeholder='Email Address']").value.trim();
-    const phone = bookingForm.querySelector("input[placeholder='Phone Number']").value.trim();
-    const barberName = bookingForm.querySelector("input[placeholder=\"Barber's Name\"]").value.trim();
-    const date = bookingForm.querySelector("input[type='date']").value;
-    const time = bookingForm.querySelector("input[type='time']").value;
-    const service = bookingForm.querySelector("select:nth-of-type(1)").value;
-    const slot = bookingForm.querySelector("select:nth-of-type(2)").value;
-    const paymentMethod = bookingForm.querySelector("select:nth-of-type(3)").value;
+    // Get values using name attributes
+    const fullName = bookingForm.fullName.value.trim();
+    const email = bookingForm.email.value.trim();
+    const phone = bookingForm.phone.value.trim();
+    const barberName = bookingForm.barberName.value.trim();
+    const date = bookingForm.date.value;
+    const time = bookingForm.time.value;
+    const service = bookingForm.service.value;
+    const slot = bookingForm.slot.value;
+    const paymentMethod = bookingForm.paymentMethod.value;
 
     try {
-      // Save booking to Firestore
       await addDoc(collection(db, "bookings"), {
         fullName,
         email,
@@ -44,4 +42,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
