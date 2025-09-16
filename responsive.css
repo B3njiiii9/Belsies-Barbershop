@@ -1,9 +1,5 @@
 /* ===== FULL RESPONSIVE STYLES ===== */
-
-/* Small devices (phones) */
 @media (max-width: 480px) {
-
-  /* Header & Nav */
   header {
     padding: 12px 20px;
   }
@@ -234,5 +230,31 @@
   .contact form {
     max-width: 90%;
     padding: 30px 20px;
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    padding: 20px;
+    display: none;        
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;      
   }
 }
